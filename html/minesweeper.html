@@ -1,0 +1,31 @@
+<section id="section-minesweeper">
+	<div class="container center">
+		<div id="minesweeper-config" class="row center">
+			<form ng-submit="doStart()">
+				<div class="col-xs-1 col-xs-offset-4">
+					<label>Width </label><input type="text"ng-model="msconfig.width" class="input-sm form-control" ng-required placeholder="9-30" pattern="([9]|[0][9]|[1-2][0-9]|[3][0])" ng-trim>
+				</div>
+				<div class="col-xs-1">
+					<label>Height </label><input type="text" ng-model="msconfig.height" class="input-sm form-control" ng-required placeholder="9-30" pattern="([9]|[0][9]|[1-2][0-9]|[3][0])" ng-trim>
+				</div>
+				<div class="col-xs-1">
+					<label>Bomb </label><input ng-model="msconfig.bomb" class="input-sm form-control" ng-required ng-trim>
+				</div>
+				<div class="col-xs-1">
+					<button type="submit" class="btn btn-primary btn-lg">Start</button>
+				</div>
+			</form>
+		</div>
+		<div class="row" ng-show="bombCounter>0">{{bombCounter}}</div>
+		<div id="minesweeper-gameplay" class="container">
+			<table class="borderless center table-ms" cellspacing="0" cellpadding="0">
+				<tr lass="table-tr-xo" ng-repeat="msrows in mstable">
+					<td class="table-td-xo" ng-repeat="msrow in msrows">
+						<button ng-if="!msrow.isOpen" class="button-ms-play center btn-info" ng-click="doPlay(msrow.row, msrow.col)" ng-right-click="doRightClick(msrow.row, msrow.col)">{{msrow.display}}</button>
+						<button ng-if="msrow.isOpen"  class="button-ms-play center disabled" ng-disabled="true"><strong>{{msrow.display}}</strong></button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</section>

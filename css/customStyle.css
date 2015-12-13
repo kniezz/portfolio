@@ -1,0 +1,51 @@
+.table-td-xo {
+	width: 25px;
+	height: 25px;
+	padding: 0;
+  margin: 0;
+}
+
+.table-tr-xo {
+	padding: 0px;
+  margin: 0px;
+}
+
+.btn-xo {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+}
+
+.table-ms {
+	border-spacing: 0;
+	border-collapse: separate;
+}
+
+.borderless {
+	border: none;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.button-ms-play {
+	width: 100%;
+	height: 25px;
+	text-align: center;
+	margin : 0;
+  padding : 0;
+  display: block;
+}

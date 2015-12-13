@@ -1,0 +1,13 @@
+<section id="section-xo">
+	<div class="container">
+		<table class="table-bordered">
+			<tr ng-repeat="rows in xotable">
+				<td class="table-td-xo" ng-repeat="row in rows">
+					<div ng-if="!row.value" class="btn-xo" ng-click="doPlay(row.row, row.col)">{{row.value}}</div>
+					<div ng-if="row.value"  class="btn-xo" ng-disabled>{{row.value}}</div>
+				</td>
+			</tr>
+		</table>
+		<div>Turn: {{turn}}</div>
+	</div>
+</section>
